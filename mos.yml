@@ -1,0 +1,46 @@
+author: mongoose-os
+description: DHT sensor usage example (JavaScript)
+version: 1.0
+
+libs_version: ${mos.version}
+modules_version: ${mos.version}
+mongoose_os_version: ${mos.version}
+
+sources:
+  - src
+filesystem:
+  - fs
+config_schema:
+  - ["app", "o", {title: "My app custom settings"}]
+#  - ["app.RXpin", "i", 15, {title: "RX pin STM32 is attached to"}]
+#  - ["app.TXpin", "i", 16, {title: "TX pin STM32 is attached to"}]
+  - ["wifi.sta.enable", true]
+  - ["wifi.sta.ssid", "GL_Guest"]
+  - ["wifi.sta.pass", "We1C0me2GL#"]
+  - ["wifi.ap.enable", false]
+  - ["device.id", "esp8266_0EA1CD"]
+  - ["mqtt.enable", true]
+  - ["mqtt.server", "IoTGetStartedAS.azure-devices.net:8883"]
+  - ["mqtt.client_id", "esp8266_0EA1CD"]
+  - ["mqtt.user", "IoTGetStartedAS.azure-devices.net:8883/esp8266_0EA1CD"]
+  - ["mqtt.pass", "SharedAccessSignature sr=IoTGetStartedAS.azure-devices.net%2Fdevices%2Fesp8266_0EA1CD&sig=McxocEQckhaa5Ede%2BeWuRTvFPbkcdtZUcD%2FAmdR9SZg%3D&se=1536323031"]
+  - ["mqtt.ssl_ca_cert", "ca.pem"]
+libs:
+    # common mgos libs
+  - origin: https://github.com/mongoose-os-libs/ca-bundle
+  - origin: https://github.com/mongoose-os-libs/i2c
+  - origin: https://github.com/mongoose-os-libs/rpc-service-config
+  - origin: https://github.com/mongoose-os-libs/rpc-service-fs
+  - origin: https://github.com/mongoose-os-libs/rpc-uart
+  - origin: https://github.com/mongoose-os-libs/spi
+
+    # libs necessary for the current app
+  - origin: https://github.com/mongoose-os-libs/wifi
+  - origin: https://github.com/mongoose-os-libs/dht
+  - origin: https://github.com/mongoose-os-libs/mjs
+  - origin: https://github.com/mongoose-os-libs/mqtt
+tags:
+  - js
+  - hw
+
+manifest_version: 2017-05-18
