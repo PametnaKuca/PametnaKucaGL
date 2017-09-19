@@ -12,19 +12,19 @@ filesystem:
   - fs
 config_schema:
   - ["app", "o", {title: "My app custom settings"}]
-#  - ["app.RXpin", "i", 15, {title: "RX pin STM32 is attached to"}]
-#  - ["app.TXpin", "i", 16, {title: "TX pin STM32 is attached to"}]
-  - ["wifi.sta.enable", true]
-  - ["wifi.sta.ssid", "GL_Guest"]
-  - ["wifi.sta.pass", "We1C0me2GL#"]
-  - ["wifi.ap.enable", false]
-  - ["device.id", "esp8266_0EA1CD"]
-  - ["mqtt.enable", true]
-  - ["mqtt.server", "IoTGetStartedAS.azure-devices.net:8883"]
-  - ["mqtt.client_id", "esp8266_0EA1CD"]
-  - ["mqtt.user", "IoTGetStartedAS.azure-devices.net:8883/esp8266_0EA1CD"]
-  - ["mqtt.pass", "SharedAccessSignature sr=IoTGetStartedAS.azure-devices.net%2Fdevices%2Fesp8266_0EA1CD&sig=McxocEQckhaa5Ede%2BeWuRTvFPbkcdtZUcD%2FAmdR9SZg%3D&se=1536323031"]
-  - ["mqtt.ssl_ca_cert", "ca.pem"]
+  - ["app.RxPin", "i", 3, {title: "RX pin STM32 is attached to"}]
+  - ["app.TxPin", "i", 1, {title: "TX pin STM32 is attached to"}]
+#  - ["wifi.sta.enable", true]
+#  - ["wifi.sta.ssid", "GL_Guest"]
+#  - ["wifi.sta.pass", "We1C0me2GL#"]
+#  - ["wifi.ap.enable", false]
+#  - ["device.id", "esp8266_0EA1CD"]
+#  - ["mqtt.enable", true]
+#  - ["mqtt.server", "IoTGetStartedAS.azure-devices.net:8883"]
+#  - ["mqtt.client_id", "esp8266_0EA1CD"]
+#  - ["mqtt.user", "IoTGetStartedAS.azure-devices.net:8883/esp8266_0EA1CD"]
+#  - ["mqtt.pass", "SharedAccessSignature sr=IoTGetStartedAS.azure-devices.net%2Fdevices%2Fesp8266_0EA1CD&sig=McxocEQckhaa5Ede%2BeWuRTvFPbkcdtZUcD%2FAmdR9SZg%3D&se=1536323031"]
+#  - ["mqtt.ssl_ca_cert", "ca.pem"]
 libs:
     # common mgos libs
   - origin: https://github.com/mongoose-os-libs/ca-bundle
