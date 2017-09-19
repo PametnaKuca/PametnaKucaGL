@@ -1,4 +1,4 @@
-load('api_config.js');
+//load('api_config.js');
 //load('api_dht.js');
 //load('api_mqtt.js');
 load('api_sys.js');
@@ -6,21 +6,18 @@ load('api_timer.js');
 load('api_uart.js');
 
 let uartNo = 0;		//uart number
-let rxAcc = '';		//accumulaterd Rx data, will be echoed back to Tx
+let rxAcc = "";		//accumulaterd Rx data, will be echoed back to Tx
 let value = false;
 //let topic = 'devices/' + Cfg.get('device.id') + '/messages/events/';
-let RxPin = Cfg.get('app.RxPin');
-let TxPin = Cfg.get('app.TxPin');
+//let RxPin = 13;
+//let TxPin = 15;
 
 
 // Configure UART at 115200 baud
 UART.setConfig(uartNo, {
-	baudRate: 115200;
+	baudRate: 115200,
 	esp8266: {
-		gpio: {
-			rx: RxPin;
-			tx: TxPin;
-		},
+		swapRxCtsTxRts: true,	//GPIO15 becomes TX instead of GPIO1, GPIO13 RX
 	},
 });
 
@@ -28,7 +25,7 @@ UART.setConfig(uartNo, {
 /*	Set Dispatcher callback that will be called whenever new Rx data or 
  *  space in the Tx buffer becomes available
  */
-UART.setDispatcher(uartNo, function(uartNo) {
+UART.setDispatcher(uartNo, function(uartNo, ud) {
 	let ra = UART.readAvail(uartNo);
 	if (ra > 0) {
 		// Received new data: print it immediately to the console, and also
@@ -43,12 +40,10 @@ UART.setDispatcher(uartNo, function(uartNo) {
 UART.setRxEnabled(uartNo, true);
 
 
-// This function reads data from the DHT sensor every 2 second
+// Send UART data every second
 Timer.set(1000 /* milliseconds */, true /* repeat */, function() {
 
   value = !value;
-  let oa = UART.writeAvail(uartNo);
-  print(Serial.write(uartNo, oa, oa.length));
   UART.write(
 	uartNo,
 	'Hello UART! '
@@ -56,7 +51,7 @@ Timer.set(1000 /* milliseconds */, true /* repeat */, function() {
 		+ ' uptime: ' + JSON.stringify(Sys.uptime())
 		+ ' RAM: ' + JSON.stringify(Sys.free_ram())
 		+ (rxAcc.length > 0 ? (' Rx: ' + rxAcc) : '')
-		+ '\n'
+		+ '\r\n'
   );
   rxAcc = '';
 

@@ -12,8 +12,11 @@ filesystem:
   - fs
 config_schema:
   - ["app", "o", {title: "My app custom settings"}]
-  - ["app.RxPin", "i", 3, {title: "RX pin STM32 is attached to"}]
-  - ["app.TxPin", "i", 1, {title: "TX pin STM32 is attached to"}]
+  - ["rpc.uart.uart_no", -1]
+  - ["debug.stdout_uart", 1]
+  - ["debug.stderr_uart", 1]
+#  - ["app.RxPin", "i", 3, {title: "RX pin STM32 is attached to"}]
+#  - ["app.TxPin", "i", 1, {title: "TX pin STM32 is attached to"}]
 #  - ["wifi.sta.enable", true]
 #  - ["wifi.sta.ssid", "GL_Guest"]
 #  - ["wifi.sta.pass", "We1C0me2GL#"]
@@ -28,17 +31,16 @@ config_schema:
 libs:
     # common mgos libs
   - origin: https://github.com/mongoose-os-libs/ca-bundle
-  - origin: https://github.com/mongoose-os-libs/i2c
+#  - origin: https://github.com/mongoose-os-libs/i2c
   - origin: https://github.com/mongoose-os-libs/rpc-service-config
   - origin: https://github.com/mongoose-os-libs/rpc-service-fs
   - origin: https://github.com/mongoose-os-libs/rpc-uart
-  - origin: https://github.com/mongoose-os-libs/spi
+#  - origin: https://github.com/mongoose-os-libs/spi
 
     # libs necessary for the current app
-  - origin: https://github.com/mongoose-os-libs/wifi
-  - origin: https://github.com/mongoose-os-libs/dht
+#  - origin: https://github.com/mongoose-os-libs/wifi
   - origin: https://github.com/mongoose-os-libs/mjs
-  - origin: https://github.com/mongoose-os-libs/mqtt
+#  - origin: https://github.com/mongoose-os-libs/mqtt
 tags:
   - js
   - hw
