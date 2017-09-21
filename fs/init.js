@@ -20,9 +20,9 @@ let parseHumidity = ffi('char* returnHumidity(char*)');
 // Configure UART at 115200 baud
 UART.setConfig(uartNo, {
 	baudRate: 115200,
-//	esp8266: {
-//		swapRxCtsTxRts: true,	//GPIO15 becomes TX instead of GPIO1, GPIO13 RX
-//	},
+	esp8266: {
+		swapRxCtsTxRts: true,	//GPIO15 becomes TX instead of GPIO1, GPIO13 RX
+	},
 });
 
 
