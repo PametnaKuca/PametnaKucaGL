@@ -1,5 +1,4 @@
 load('api_config.js');
-//load('api_dht.js');
 load('api_mqtt.js');
 load('api_sys.js');
 load('api_timer.js');
@@ -11,7 +10,9 @@ let isConnected = false;
 let isMQTTConnected = false;
 
 let deviceId = Cfg.get('device.id');
-let topic = 'devices/' + deviceId + '/messages/events/';
+let topicPub = 'devices/' + deviceId + '/messages/events/';
+//let topicSub = 'devices/' + deviceId + 'messages/devicebound/#';
+
 
 /* Imported C functions */
 let parseTemperature = ffi('char* returnTemperature(char*)');
@@ -63,10 +64,7 @@ MQTT.setEventHandler(function(conn, ev, evdata){
 	if(ev === MQTT.EV_CONNACK) {
 		isMQTTConnected = true;
 		print("MQTT Connection Acknowledge:", JSON.stringify(ev));
-	} //else {
-		//isMQTTConnected = false;
-		//print("Nisam povezan");
-	//}
+	}
 	if(ev === 214) {
 		isMQTTConnected = false;
 		print("MQTT DisConnection:", JSON.stringify(ev));
@@ -81,19 +79,19 @@ UART.setDispatcher(uartNo, function(uartNo, ud) {
 	let ra = UART.readAvail(uartNo);
 	let oa = UART.writeAvail(uartNo);
 	if (ra > 0) {
-		// Received new data: print it immediately to the console, and also
-		// accumulate in the "rxAcc" variable which will be echoed back to UART later
 		let rec = UART.read(uartNo);
-		//UART.write(uartNo, 'Received UART data:' + data + '\r\n');
 		print("Received UART data:", rec);
+			
+		/* save first byte as ID, send rest of the string for parsing */
+
+
 		let temp = parseTemperature(rec);
 		print('Parsed temperature:', temp);
 		let hum = parseHumidity(rec);
 		print('Parsed humidity:', hum);		
 		let msg = JSON.stringify({ "temperature": temp, "humidity": hum });
 		print('Poruka za slanje:', msg);
-		//print(msg);
-		let ok = MQTT.pub(topic, msg, 1);
+		let ok = MQTT.pub(topicPub, msg, 1);
 		print("Published: ", ok ? "yes" : "no", "Response", ok);
 	}  
 }, null);

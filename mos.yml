@@ -1,5 +1,5 @@
-author: mongoose-os
-description: DHT sensor usage example (JavaScript)
+author: Adam Sedmak
+description: Read data from UART and send it to Microsoft Azure
 version: 1.0
 
 libs_version: ${mos.version}
@@ -29,7 +29,6 @@ config_schema:
 libs:
     # common mgos libs
   - origin: https://github.com/mongoose-os-libs/ca-bundle
-#  - origin: https://github.com/mongoose-os-libs/i2c
   - origin: https://github.com/mongoose-os-libs/rpc-service-config
   - origin: https://github.com/mongoose-os-libs/rpc-service-fs
   - origin: https://github.com/mongoose-os-libs/rpc-uart
@@ -38,9 +37,7 @@ libs:
   - origin: https://github.com/mongoose-os-libs/ota-http-server
   - origin: https://github.com/mongoose-os-libs/rpc-common
   - origin: https://github.com/mongoose-os-libs/rpc-loopback
-#  - origin: https://github.com/mongoose-os-libs/rpc-mqtt
   - origin: https://github.com/mongoose-os-libs/rpc-service-ota
-#  - origin: https://github.com/mongoose-os-libs/spi
 
     # libs necessary for the current app
   - origin: https://github.com/mongoose-os-libs/wifi
@@ -50,4 +47,4 @@ tags:
   - js
   - hw
 
-manifest_version: 2017-05-18
+manifest_version: 20.09.2017.
