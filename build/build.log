@@ -1,0 +1,164 @@
+Handling lib "ca-bundle"...
+The --lib flag was not given for it, checking repository
+Prepared local dir: "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/ca-bundle-1.17"
+Handling lib "rpc-service-config"...
+The --lib flag was not given for it, checking repository
+Prepared local dir: "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-service-config-1.17"
+Handling lib "rpc-common"...
+The --lib flag was not given for it, checking repository
+Prepared local dir: "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-common-1.17"
+Handling lib "http-server"...
+Optional, skipping
+Handling lib "rpc-service-fs"...
+The --lib flag was not given for it, checking repository
+Prepared local dir: "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-service-fs-1.17"
+Handling lib "rpc-common"...
+Already handled, skipping
+Handling lib "rpc-uart"...
+The --lib flag was not given for it, checking repository
+Prepared local dir: "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-uart-1.17"
+Handling lib "rpc-common"...
+Already handled, skipping
+Handling lib "http-server"...
+The --lib flag was not given for it, checking repository
+Prepared local dir: "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/http-server-1.17"
+Handling lib "atca"...
+Optional, skipping
+Handling lib "ethernet"...
+Optional, skipping
+Handling lib "wifi"...
+Optional, skipping
+Handling lib "ota-http-server"...
+The --lib flag was not given for it, checking repository
+Prepared local dir: "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/ota-http-server-1.17"
+Handling lib "http-server"...
+Already handled, skipping
+Handling lib "ota-http-client"...
+The --lib flag was not given for it, checking repository
+Prepared local dir: "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/ota-http-client-1.17"
+Handling lib "rpc-common"...
+Already handled, skipping
+Handling lib "rpc-loopback"...
+The --lib flag was not given for it, checking repository
+Prepared local dir: "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-loopback-1.17"
+Handling lib "rpc-common"...
+Already handled, skipping
+Handling lib "rpc-service-ota"...
+The --lib flag was not given for it, checking repository
+Prepared local dir: "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-service-ota-1.17"
+Handling lib "ota-http-client"...
+Already handled, skipping
+Handling lib "rpc-common"...
+Already handled, skipping
+Handling lib "wifi"...
+The --lib flag was not given for it, checking repository
+Prepared local dir: "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/wifi-1.17"
+Handling lib "mjs"...
+The --lib flag was not given for it, checking repository
+Prepared local dir: "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/mjs-1.17"
+Handling lib "mqtt"...
+The --lib flag was not given for it, checking repository
+Prepared local dir: "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/mqtt-1.17"
+The flag --module is not given for the module "mjs", going to use the repository
+The flag --repo is not given, going to use mongoose-os repository
+Sources: [/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/ca-bundle-1.17/src/*.c /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/ca-bundle-1.17/src/*.cpp /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/wifi-1.17/src/*.c /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/wifi-1.17/src/*.cpp /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/wifi-1.17/esp8266/src/*.c /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/wifi-1.17/esp8266/src/*.cpp /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/http-server-1.17/src/*.c /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/http-server-1.17/src/*.cpp /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/mjs-1.17/src/*.c /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/mjs-1.17/src/*.cpp /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/modules/mjs-1.17/mjs.c /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/mjs-1.17/esp8266/src/*.c /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/mjs-1.17/esp8266/src/*.cpp /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/mqtt-1.17/src/*.c /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/mqtt-1.17/src/*.cpp /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/ota-http-client-1.17/src/*.c /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/ota-http-client-1.17/src/*.cpp /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/ota-http-server-1.17/src/*.c /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/ota-http-server-1.17/src/*.cpp /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-common-1.17/src/mg_rpc/*.c /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-common-1.17/src/mg_rpc/*.cpp /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-common-1.17/src/*.c /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-common-1.17/src/*.cpp /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-loopback-1.17/src/*.c /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-loopback-1.17/src/*.cpp /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-service-config-1.17/src/*.c /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-service-config-1.17/src/*.cpp /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-service-fs-1.17/src/*.c /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-service-fs-1.17/src/*.cpp /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-service-ota-1.17/src/*.c /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-service-ota-1.17/src/*.cpp /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-uart-1.17/src/*.c /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-uart-1.17/src/*.cpp /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/src/*.c /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/src/*.cpp /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/build/gen/deps_init.c]
+Building...
+mount from "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271" to "/app"
+
+mount from "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/modules/mongoose-os-1.17" to "/mongoose-os"
+
+mount from "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/modules/mongoose-os-1.17" to "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/modules/mongoose-os-1.17"
+
+mount from "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/build" to "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/build"
+
+mount from "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/ca-bundle-1.17/src" to "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/ca-bundle-1.17/src"
+
+mount from "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/wifi-1.17/src" to "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/wifi-1.17/src"
+
+mount from "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/wifi-1.17/esp8266/src" to "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/wifi-1.17/esp8266/src"
+
+mount from "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/http-server-1.17/src" to "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/http-server-1.17/src"
+
+mount from "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/mjs-1.17/src" to "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/mjs-1.17/src"
+
+mount from "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/modules/mjs-1.17" to "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/modules/mjs-1.17"
+
+mount from "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/mjs-1.17/esp8266/src" to "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/mjs-1.17/esp8266/src"
+
+mount from "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/mqtt-1.17/src" to "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/mqtt-1.17/src"
+
+mount from "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/ota-http-client-1.17/src" to "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/ota-http-client-1.17/src"
+
+mount from "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/ota-http-server-1.17/src" to "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/ota-http-server-1.17/src"
+
+mount from "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-common-1.17/src/mg_rpc" to "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-common-1.17/src/mg_rpc"
+
+mount from "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-common-1.17/src" to "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-common-1.17/src"
+
+mount from "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-loopback-1.17/src" to "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-loopback-1.17/src"
+
+mount from "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-service-config-1.17/src" to "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-service-config-1.17/src"
+
+mount from "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-service-fs-1.17/src" to "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-service-fs-1.17/src"
+
+mount from "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-service-ota-1.17/src" to "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-service-ota-1.17/src"
+
+mount from "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-uart-1.17/src" to "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-uart-1.17/src"
+
+mount from "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/src" to "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/src"
+
+mount from "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/build/gen" to "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/build/gen"
+
+mount from "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/ca-bundle-1.17/fs" to "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/ca-bundle-1.17/fs"
+
+mount from "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/mjs-1.17/fs" to "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/mjs-1.17/fs"
+
+mount from "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/modules/mjs-1.17/mjs/lib" to "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/modules/mjs-1.17/mjs/lib"
+
+mount from "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/wifi-1.17/mjs_fs" to "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/wifi-1.17/mjs_fs"
+
+mount from "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/mqtt-1.17/mjs_fs" to "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/mqtt-1.17/mjs_fs"
+
+mount from "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-common-1.17/mjs_fs" to "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-common-1.17/mjs_fs"
+
+mount from "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/mjs-1.17/esp8266/fs" to "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/mjs-1.17/esp8266/fs"
+
+mount from "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/fs" to "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/fs"
+
+mount from "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/build/gen" to "/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/build/gen"
+
+Docker arguments: run --name mos_build_2017-09-28T14-38-07-00 --rm -i -v /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/mqtt-1.17/src:/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/mqtt-1.17/src -v /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-common-1.17/src/mg_rpc:/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-common-1.17/src/mg_rpc -v /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-uart-1.17/src:/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-uart-1.17/src -v /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/src:/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/src -v /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/ca-bundle-1.17/src:/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/ca-bundle-1.17/src -v /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/wifi-1.17/src:/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/wifi-1.17/src -v /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/http-server-1.17/src:/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/http-server-1.17/src -v /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/wifi-1.17/esp8266/src:/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/wifi-1.17/esp8266/src -v /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/ca-bundle-1.17/fs:/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/ca-bundle-1.17/fs -v /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/mjs-1.17/fs:/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/mjs-1.17/fs -v /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/build/gen:/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/build/gen -v /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271:/app -v /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/modules/mjs-1.17:/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/modules/mjs-1.17 -v /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-service-ota-1.17/src:/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-service-ota-1.17/src -v /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-common-1.17/mjs_fs:/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-common-1.17/mjs_fs -v /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/mjs-1.17/esp8266/src:/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/mjs-1.17/esp8266/src -v /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-service-config-1.17/src:/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-service-config-1.17/src -v /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-service-fs-1.17/src:/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-service-fs-1.17/src -v /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/mjs-1.17/esp8266/fs:/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/mjs-1.17/esp8266/fs -v /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/fs:/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/fs -v /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/modules/mongoose-os-1.17:/mongoose-os -v /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/modules/mongoose-os-1.17:/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/modules/mongoose-os-1.17 -v /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/mjs-1.17/src:/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/mjs-1.17/src -v /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/mqtt-1.17/mjs_fs:/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/mqtt-1.17/mjs_fs -v /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/ota-http-server-1.17/src:/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/ota-http-server-1.17/src -v /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-loopback-1.17/src:/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-loopback-1.17/src -v /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/modules/mjs-1.17/mjs/lib:/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/modules/mjs-1.17/mjs/lib -v /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/wifi-1.17/mjs_fs:/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/wifi-1.17/mjs_fs -v /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/build:/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/build -v /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/ota-http-client-1.17/src:/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/ota-http-client-1.17/src -v /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-common-1.17/src:/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-common-1.17/src --user 0:0 docker.cesanta.com/esp8266-build:2.1.0-1.5.0-r5 /bin/bash -c nice make '-j' '16' '-C' '/app' '-f' '/mongoose-os/fw/platforms/esp8266/Makefile.build' 'all' 'MGOS_HAVE_MJS=1' 'MGOS_HAVE_RPC_SERVICE_OTA=1' 'PLATFORM=esp8266' 'FS_STAGING_DIR=build/fs' 'MGOS_HAVE_RPC_SERVICE_FS=1' 'APP_CFLAGS=-DMGOS_HAVE_OTA_HTTP_CLIENT=1 -DMGOS_ENABLE_SYS_SERVICE=1 -DMGOS_ENABLE_RPC_CHANNEL_WS=1 -DMGOS_ENABLE_TUNNEL=0 -DMGOS_HAVE_RPC_COMMON=1 -DMGOS_HAVE_RPC_SERVICE_OTA=1 -DMGOS_ENABLE_FILE_UPLOAD=1 -DMGOS_ENABLE_RPC_CHANNEL_HTTP=1 -DMGOS_HAVE_HTTP_SERVER=1 -DMGOS_HAVE_MJS=1 -DMGOS_HAVE_WIFI=1 -DMGOS_HAVE_OTA_HTTP_SERVER=1 -DMGOS_HAVE_RPC_SERVICE_FS=1 -DMGOS_HAVE_CA_BUNDLE=1 -DMGOS_HAVE_RPC_SERVICE_CONFIG=1 -DMGOS_HAVE_RPC_LOOPBACK=1 -DMGOS_HAVE_RPC_UART=1 -DMG_ENABLE_MQTT=1 -DMGOS_ENABLE_WEB_CONFIG=0 -DMGOS_WIFI_ENABLE_AP_STA=1 -DMGOS_HAVE_MQTT=1' 'FFI_SYMBOLS=' 'MGOS_HAVE_CA_BUNDLE=1' 'MGOS_HAVE_OTA_HTTP_SERVER=1' 'MGOS_HAVE_RPC_LOOPBACK=1' 'BUILD_DIR=build/objs' 'MGOS_ENABLE_UPDATER=1' 'APP_VERSION=1.0' 'APP_BIN_LIBS=' 'MGOS_WIFI_ENABLE_AP_STA=1' 'MGOS_HAVE_OTA_HTTP_CLIENT=1' 'MGOS_HAVE_MQTT=1' 'APP=deviceToCloud' 'MGOS_HAVE_WIFI=1' 'MGOS_HAVE_RPC_SERVICE_CONFIG=1' 'APP_CXXFLAGS=-DMGOS_HAVE_WIFI=1 -DMGOS_HAVE_OTA_HTTP_SERVER=1 -DMGOS_ENABLE_FILE_UPLOAD=1 -DMGOS_ENABLE_RPC_CHANNEL_HTTP=1 -DMGOS_HAVE_HTTP_SERVER=1 -DMGOS_HAVE_MJS=1 -DMGOS_HAVE_RPC_UART=1 -DMGOS_HAVE_RPC_SERVICE_FS=1 -DMGOS_HAVE_CA_BUNDLE=1 -DMGOS_HAVE_RPC_SERVICE_CONFIG=1 -DMGOS_HAVE_RPC_LOOPBACK=1 -DMG_ENABLE_MQTT=1 -DMGOS_ENABLE_WEB_CONFIG=0 -DMGOS_WIFI_ENABLE_AP_STA=1 -DMGOS_HAVE_MQTT=1 -DMGOS_HAVE_RPC_COMMON=1 -DMGOS_HAVE_RPC_SERVICE_OTA=1 -DMGOS_HAVE_OTA_HTTP_CLIENT=1 -DMGOS_ENABLE_SYS_SERVICE=1 -DMGOS_ENABLE_RPC_CHANNEL_WS=1 -DMGOS_ENABLE_TUNNEL=0' 'APP_FS_FILES=/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/ca-bundle-1.17/fs/* /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/mjs-1.17/fs/* /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/modules/mjs-1.17/mjs/lib/api_*.js /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/wifi-1.17/mjs_fs/* /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/mqtt-1.17/mjs_fs/* /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-common-1.17/mjs_fs/* /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/mjs-1.17/esp8266/fs/* /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/fs/*' 'MGOS_HAVE_RPC_COMMON=1' 'MGOS_HAVE_RPC_UART=1' 'FW_DIR=build/fw' 'GEN_DIR=/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/build/gen' 'MANIFEST_FINAL=/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/build/gen/mos_final.yml' 'APP_CONF_SCHEMA=/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/build/gen/mos_conf_schema.yml' 'MGOS_HAVE_HTTP_SERVER=1' 'MGOS_PATH=/mongoose-os' 'APP_SOURCES=/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/ca-bundle-1.17/src/*.c /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/ca-bundle-1.17/src/*.cpp /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/wifi-1.17/src/*.c /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/wifi-1.17/src/*.cpp /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/wifi-1.17/esp8266/src/*.c /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/wifi-1.17/esp8266/src/*.cpp /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/http-server-1.17/src/*.c /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/http-server-1.17/src/*.cpp /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/mjs-1.17/src/*.c /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/mjs-1.17/src/*.cpp /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/modules/mjs-1.17/mjs.c /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/mjs-1.17/esp8266/src/*.c /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/mjs-1.17/esp8266/src/*.cpp /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/mqtt-1.17/src/*.c /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/mqtt-1.17/src/*.cpp /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/ota-http-client-1.17/src/*.c /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/ota-http-client-1.17/src/*.cpp /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/ota-http-server-1.17/src/*.c /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/ota-http-server-1.17/src/*.cpp /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-common-1.17/src/mg_rpc/*.c /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-common-1.17/src/mg_rpc/*.cpp /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-common-1.17/src/*.c /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-common-1.17/src/*.cpp /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-loopback-1.17/src/*.c /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-loopback-1.17/src/*.cpp /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-service-config-1.17/src/*.c /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-service-config-1.17/src/*.cpp /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-service-fs-1.17/src/*.c /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-service-fs-1.17/src/*.cpp /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-service-ota-1.17/src/*.c /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-service-ota-1.17/src/*.cpp /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-uart-1.17/src/*.c /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/libs/rpc-uart-1.17/src/*.cpp /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/src/*.c /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/src/*.cpp /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/build/gen/deps_init.c'
+make: Entering directory '/app'
+  CC    /fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/src/package.c -> /app/build/objs/package.c.o
+/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/src/package.c: In function 'parsePackage':
+/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/src/package.c:42:53: error: comparison between pointer and integer [-Werror]
+  if((i < (SIZE_STR_LEN + package->size)) && (str[i] != "\0")){
+                                                     ^
+/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/src/package.c:42:53: error: comparison with string literal results in unspecified behavior [-Werror=address]
+/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/src/package.c:52:53: error: comparison between pointer and integer [-Werror]
+  if((i < (SIZE_STR_LEN + package->size)) && (str[i] != "\0")){
+                                                     ^
+/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/src/package.c:52:53: error: comparison with string literal results in unspecified behavior [-Werror=address]
+/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/src/package.c:62:53: error: comparison between pointer and integer [-Werror]
+  if((i < (SIZE_STR_LEN + package->size)) && (str[i] != "\0")){
+                                                     ^
+/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/src/package.c:62:53: error: comparison with string literal results in unspecified behavior [-Werror=address]
+/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/src/package.c:72:2: error: statement with no effect [-Werror=unused-value]
+  for(i; i < (SIZE_STR_LEN + package->size) - 1; i++ ){
+  ^
+/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/src/package.c:73:14: error: comparison between pointer and integer [-Werror]
+   if (str[i] == "\0"){
+              ^
+/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/src/package.c:73:14: error: comparison with string literal results in unspecified behavior [-Werror=address]
+/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/src/package.c:81:19: error: incompatible types when assigning to type 'char[995]' from type 'char *'
+  package->message = message;
+                   ^
+/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/src/package.c:84:53: error: comparison between pointer and integer [-Werror]
+  if((i < (SIZE_STR_LEN + package->size)) && (str[i] != "\0")){
+                                                     ^
+/fwbuild-volumes/1.17/apps/deviceToCloud/esp8266/build_contexts/build_ctx_776309271/src/package.c:84:53: error: comparison with string literal results in unspecified behavior [-Werror=address]
+cc1: all warnings being treated as errors
+make: *** [/app/build/objs/package.c.o] Error 1
+/mongoose-os/fw/platforms/esp8266/Makefile.build:455: recipe for target '/app/build/objs/package.c.o' failed
+make: Leaving directory '/app'
+Error: exit status 2
