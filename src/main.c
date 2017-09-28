@@ -1,3 +1,7 @@
+/*  This library is used to parse temperature and humidity from the incoming 
+ *  string that has a form of ("%f,%f", temperature, humidity)
+ */
+
 #include <stdio.h>
 #include <string.h>
 
@@ -11,13 +15,16 @@
 #include "mgos_dlsym.h"
 #include "mjs.h"
 
+/*  Function returnTemperature parses first parameter of incoming string and 
+ *  returns that value.
+ */
+
 char *returnTemperature(char *str){
     static char temp[10] = "";
     int i;
     int offset = 0;
     for(i = 0; str[i] != '\0'; i++){
         if(((str[i] >= '0') && (str[i] <= '9')) || (str[i] == '.')){
-            //printf("DEBUG1: %c\n", str[i]);
             offset += sprintf(temp + offset, "%c", str[i]);
         } else {
             printf("%s\n", temp);
@@ -27,6 +34,9 @@ char *returnTemperature(char *str){
 	return temp;
 }
 
+/*  Function returnHumidity parses second parameter of incoming string and 
+ *  returns that value.
+ */
 char *returnHumidity(char *str){
     static char hum[10] = "";
     int j = 0;
@@ -40,7 +50,6 @@ char *returnHumidity(char *str){
     for(i = j; str[i] != '\0'; i++){
 
         if(((str[i] >= '0') && (str[i] <= '9')) || (str[i] == '.')){
-            //printf("DEBUG2: %c\n", str[i]);
             offset += sprintf(hum + offset, "%c", str[i]);
         } else {
             printf("%s\n", hum);

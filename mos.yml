@@ -12,12 +12,14 @@ filesystem:
   - fs
 config_schema:
   - ["rpc.uart.uart_no", -1]
-  - ["debug.stdout_uart", 1]
-  - ["debug.stderr_uart", 1]
+#  - ["debug.stdout_uart", 1]
+#  - ["debug.stderr_uart", 1]
   - ["wifi.sta.enable", true]
   - ["wifi.sta.ssid", "GL_Guest"]
   - ["wifi.sta.pass", "We1C0me2GL#"]
-  - ["wifi.ap.enable", false]
+  - ["wifi.ap.enable", true]
+  - ["wifi.ap.ssid", "Mongoose_ESP_Master"]
+  - ["wifi.ap.pass", "PametnaKuca123"]
   - ["device.id", "esp8266_0EA1CD"]
   - ["mqtt.enable", true]
   - ["mqtt.server", "IoTGetStartedAS.azure-devices.net:8883"]
@@ -46,5 +48,7 @@ libs:
 tags:
   - js
   - hw
+  - c
+  - azure
 
 manifest_version: 2017-05-18
