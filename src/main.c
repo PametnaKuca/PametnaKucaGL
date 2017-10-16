@@ -89,11 +89,11 @@ int checkIfValid(char* str, int size){
 		xorString = xorString ^ *(nextChar++);
 		tempSize++;
 	}
-	printf("Got: %c, Required: %c\n", xorString, *nextChar);
+	printf("Got: %c, Required: %c\r\n", xorString, *nextChar);
 	tempSize = tempSize + XOR_STR_LEN - SIZE_STR_LEN;
 	if((*nextChar == xorString) && (tempSize == size))
 		return 1;
-	printf("Received and sent string are different!");
+	printf("Received and sent string are different!\r\n");
 	return 0;
 }
 
