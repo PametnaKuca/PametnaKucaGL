@@ -1,5 +1,5 @@
-author: mongoose-os
-description: A Mongoose OS app skeleton
+author: Adam Sedmak
+description: Mongoose app for slave ESP to connect to master ESP
 version: 1.0
 
 libs_version: ${mos.version}
@@ -18,15 +18,18 @@ sources:
 filesystem:
   - fs
 
-# Custom configuration entries, settable via "device configuration"
-# Below is a custom firmware configuration example.
-# Uncomment and modify according to your needs:
-
-# config_schema:
-#  - ["my_app", "o", {title: "My app custom settings"}]
-#  - ["my_app.bool_value", "b", false, {title: "Some boolean value"}]
-#  - ["my_app.string_value", "s", "", {title: "Some string value"}]
-#  - ["my_app.int_value", "i", 123, {title: "Some integer value"}]
+config_schema:
+ - ["device.id", "esp8266_28EC66"]
+ - ["wifi.sta.enable", true]
+ - ["wifi.sta.ssid", "MongooseESPMaster"]
+ - ["wifi.sta.pass", "Mongoose"]
+ - ["wifi.sta.ip", "192.168.4.2"]
+ - ["wifi.sta.netmask", "255.255.255.0"]
+ - ["wifi.sta.gw", "192.168.4.1"]
+ - ["wifi.sta.nameserver", "192.168.4.1"]
+ - ["wifi.ap.enable", false]
+ - ["rpc.ws.server_address", "192.168.4.1"]
+# - ["debug.level", 2]
 
 # These settings get compiled into the C structure, and can be accessed
 # from the C code this way:
@@ -52,7 +55,15 @@ libs:
   - origin: https://github.com/mongoose-os-libs/rpc-service-config
   - origin: https://github.com/mongoose-os-libs/rpc-service-fs
   - origin: https://github.com/mongoose-os-libs/rpc-uart
+  - origin: https://github.com/mongoose-os-libs/rpc-common
+  - origin: https://github.com/mongoose-os-libs/rpc-loopback
+  - origin: https://github.com/mongoose-os-libs/rpc-service-ota
   - origin: https://github.com/mongoose-os-libs/wifi
+  - origin: https://github.com/mongoose-os-libs/mjs
+  - origin: https://github.com/mongoose-os-libs/dht
+  - origin: https://github.com/mongoose-os-libs/ota-http-server
+  - origin: https://github.com/mongoose-os-libs/ota-http-client
+
 
 # Used by the mos tool to catch mos binaries incompatible with this file format
 manifest_version: 2017-05-18
