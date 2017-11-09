@@ -43,7 +43,7 @@ Timer.set(5*1000 /* milliseconds */, true /* repeat */, function(conn) {
 		print('Getting HTTP request...');
 		let temp = dht.getTemp();
 		let hum = dht.getHumidity();
-		let data = JSON.stringify({ temperature: temp, humidity: hum });
+		let data = JSON.stringify(temp) + ',' + JSON.stringify(hum);
 		print("Data: ", data);
 		let msg = createPackage(ID, subID, conf, data);
 		print("Message: ", msg);

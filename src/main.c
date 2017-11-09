@@ -36,16 +36,27 @@ char* stringXOR(char *message)
 		return xorString;		
 }
 
-char* createPackage(int ID, int subID, int ctrl, char *data)
+char* createPackage(int ID, int subID, int conf, char *data)
 {
-	static char packageTemp[MAX_PACK_LEN + 1], *xorStr;
+	static char packageTemp[MAX_PACK_LEN + 1], *xor;
+	//static char strID[3], strSubID[3], strConf[3], xorStr[3];
 	short size = stringLength(data) + 4; // Message length + ID byte + SUB_ID byte + CTRL byte + XOR byte
-	char protocolData[] = {(char)ID , (char)subID, (char)ctrl, '\0'};
+	int sizeCnt = 0;
+	int i = 0;
+
+	char protocolData[] = {(char)ID , (char)subID, (char)conf, '\0'};
+
+	//Adding input parameters to their respective strings
 	sprintf(packageTemp, "%.3d", size);
 	strcat(packageTemp,protocolData);
 	strcat(packageTemp,data);
-	xorStr = stringXOR(packageTemp);
-	strcat(packageTemp, xorStr);
+
+	//Adding XOR to the package
+	xor = stringXOR(packageTemp);
+	strcat(packageTemp, xor);
+
+	while(packageTemp[i++] != '\0')
+		sizeCnt++;
 	return packageTemp;
 }
 

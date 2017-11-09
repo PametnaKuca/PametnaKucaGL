@@ -24,8 +24,8 @@ let dht = DHT.create(pin, DHT.DHT22);
 
 let isConnected;
 let deviceId = Cfg.get('device.id');
-let ID = 0x04;
-let subID = 0x02;
-let conf = 1;
+let ID = 0x3E;
+let subID = 0x26;
+let conf = 0x2A;
 
 
