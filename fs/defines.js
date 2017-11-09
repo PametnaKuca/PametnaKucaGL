@@ -24,5 +24,13 @@ let topicPub = 'devices/' + deviceId + '/messages/events/';
 let qos = 1;
 
 /* Imported C functions */
-let parseTemperature = ffi('char* returnTemperature(char*)');
-let parseHumidity = ffi('char* returnHumidity(char*)');
+let removeQuotation = ffi('char* removeQuotationESP(char*)');
+let parseTemperature = ffi('char* returnTemperatureESP(char*)');
+let parseHumidity = ffi('char* returnHumidityESP(char*)');
+
+let checkIfValid = ffi('int checkIfValidESP(char*, int)');
+let getSize = ffi('int getSizeESP(char*)');
+let getID = ffi('char* getIDESP(char*)');
+let getSubID = ffi('char* getSubIDESP(char*)');
+let getConf = ffi('char* getConfESP(char*)');
+let getMessage = ffi('char* getMessageESP(char*, int)');

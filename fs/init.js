@@ -115,5 +115,27 @@ Net.serve({
 
 RPC.addHandler('SendData', function(args){
 	print('Argument: ', args.msg);
+
+	let recData = removeQuotation(args.msg);
+	let size = getSize(recData);
+	print('Size:', size);
+
+	/* Check if last byte(XOR) matches the message */
+	if (checkIfValid(recData, size)){
+		print(uartNo, 'Message is valid!');
+
+		let ID = getID(recData);
+		print('ID:', ID);
+
+		let subID = getSubID(recData);
+		print('SubID:', subID);
+
+		let conf = getConf(recData);
+		print('Configuration:', conf);
+			
+		let message = getMessage(recData, size);
+		print('Message:', message);
+		print(' ');
+	}
 	return true;
 });
