@@ -8,7 +8,7 @@ load('api_http.js');
 load('api_rpc.js');
 
 /* ID values */
-let dhtId = 0x01;
+let dhtId = 0x3E;
 let mapInitId = 0x02;
 let mapChangeId = 0x03;
 let rfidAddId = 0x04;
@@ -27,6 +27,7 @@ let qos = 1;
 let removeQuotation = ffi('char* removeQuotationESP(char*)');
 let parseTemperature = ffi('char* returnTemperatureESP(char*)');
 let parseHumidity = ffi('char* returnHumidityESP(char*)');
+let returnChar = ffi('char* returnChar(int)');
 
 let checkIfValid = ffi('int checkIfValidESP(char*, int)');
 let getSize = ffi('int getSizeESP(char*)');

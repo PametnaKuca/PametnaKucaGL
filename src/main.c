@@ -21,16 +21,35 @@
 #define XOR_STR_LEN 1
 #define EXTRA_STR_LEN (ID_STR_LEN + SUB_ID_STR_LEN + CONF_STR_LEN + XOR_STR_LEN)
 
+/*  Function that removes quotation marks that get created as a result of 
+ *  JSON.stringify method used on slave ESP
+ *	@param str - input string received from communication
+ *	return - string without first and last character
+ */
 char *removeQuotationESP(char *str){
 	static char *tempStr;
 	tempStr = str;
 	tempStr++;
 	tempStr[strlen(tempStr)-1] = 0;
 	return tempStr;
-
 }
 
-/* Function parses temperature from input string in form (temp,hum) */
+/*  Function that returns character value of an integer
+ *  Used for converting hexadecimal to string
+ *  @param characterToReturn - hexadecimal character for conversion
+ *  return - stringified character
+ */
+char *returnChar(int characterToReturn){
+	static char retVal[2];
+	retVal[0] = (char) characterToReturn;
+	retVal[1] = '\0';
+	return retVal;
+}
+
+/*  Function parses temperature from message data input string
+ *  @param str - string in form "temperature,humidity", withouth quotation marks
+ *  return - all characters till comma
+ */
 char *returnTemperatureESP(char *str){
     static char temp[10] = "";
     int i;
@@ -40,14 +59,16 @@ char *returnTemperatureESP(char *str){
             //printf("DEBUG1: %c\n", str[i]);
             offset += sprintf(temp + offset, "%c", str[i]);
         } else {
-            printf("%s\n", temp);
             return temp;
         }
     }
 	return temp;
 }
 
-/* Function parses humidity from input string in form (temp,hum) */
+/*  Function parses humidity from message data input string
+ *  @param str - string in form "temperature,humidity", withouth quotation marks
+ *  return - all characters after comma
+ */
 char *returnHumidityESP(char *str){
     static char hum[10] = "";
     int j = 0;
@@ -64,11 +85,9 @@ char *returnHumidityESP(char *str){
             //printf("DEBUG2: %c\n", str[i]);
             offset += sprintf(hum + offset, "%c", str[i]);
         } else {
-            printf("%s\n", hum);
             return hum;
         }
     }
-    printf("%s\n", hum);
     return hum;
 }
 
@@ -79,7 +98,7 @@ char *returnHumidityESP(char *str){
  *  calculating xor value, calculates received string size.
  *	@param str -> string to check
  *  @param size -> size of the string (without first 3 bytes)
- * 	@return -> 0 if different string was received than sent, 1 if strings are same
+ * 	return -> 0 if different string was received than sent, 1 if strings are same
  */
 int checkIfValidESP(char* str, int size){
 	char xorString = *str;
@@ -99,7 +118,7 @@ int checkIfValidESP(char* str, int size){
 
 /*  Function which parses first 3 bytes from the input string
  * 	@param str -> string to parse
- *	@return -> first 3 bytes of the string casted into short
+ *	return -> first 3 bytes of the string casted into short
  */
 int getSizeESP(char *str){
 	char size[SIZE_STR_LEN];
@@ -110,7 +129,10 @@ int getSizeESP(char *str){
 	return (short) atoi(size);
 }
 
-/* Function parses out ID (4th byte) from the input string */
+/*  Function parses out ID (4th byte) from the input string 
+ *	@param str - message received from other device 
+ *  return - fourth byte (ID)
+ */
 char *getIDESP(char *str){
 	static char ID[2] = "";
 	int i;
@@ -120,7 +142,10 @@ char *getIDESP(char *str){
 	return ID;
 }
 
-/* Function parses out subID (5th byte) from the input string */
+/*  Function parses out subID (5th byte) from the input string 
+ *	@param str - message received from other device 
+ *  return - fifth byte (subID)
+ */
 char *getSubIDESP(char *str){
 	static char subID[2] = "";
 	int i;
@@ -130,7 +155,10 @@ char *getSubIDESP(char *str){
 	return subID;
 }
 
-/* Function parses out configuration (6th byte) from the input string */
+/*  Function parses out configuration byte (6th byte) from the input string 
+ *	@param str - message received from other device 
+ *  return - sixth byte (configuration)
+ */
 char *getConfESP(char *str){
 	static char conf[2] = "";
 	int i;

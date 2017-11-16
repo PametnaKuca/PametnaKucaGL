@@ -40,16 +40,8 @@ Net.serve({
 		print('Connected from:', Net.ctos(conn, false, true, true));
 	},
 	ondata: function(conn, data){
-		print('blabla');
 		print('Received data from:', Net.ctos(conn, false, true, true), ':', data);
-		Net.send(conn, data);            // Echo received data back
-	 	//Net.discard(conn, data.length);  // Discard received data
 	},
-	//onevent: function(conn, data){
-	//	print('Received event:', Net.ctos(conn, false, true, true), ':', data);
-		//Net.send(conn, data);            // Echo received data back
-	   	//Net.discard(conn, data.length);  // Discard received data
-	//},
 	onclose: function(conn){
 		print("Disconnected!");
 	},
@@ -61,16 +53,16 @@ Net.serve({
  *  be low-level network events like Net.EV_CLOSE or MQTT specific events like
  *  MQTT.EV_CONNACK.
  */
-//MQTT.setEventHandler(function(conn, ev, evdata){
-//	if(ev === MQTT.EV_CONNACK) {
-//		isMQTTConnected = true;
-//		print("MQTT Connection Acknowledge:", JSON.stringify(ev));
-//	}
-//	if(ev === 214) {
-//		isMQTTConnected = false;
-//		print("MQTT Disconnection:", JSON.stringify(ev));
-//	}
-//}, null);
+MQTT.setEventHandler(function(conn, ev, evdata){
+	if(ev === MQTT.EV_CONNACK) {
+		isMQTTConnected = true;
+		print("MQTT Connection Acknowledge:", JSON.stringify(ev));
+	}
+	if(ev === 214) {
+		isMQTTConnected = false;
+		print("MQTT Disconnection:", JSON.stringify(ev));
+	}
+}, null);
 
 
 /*	Set Dispatcher callback that will be called whenever new Rx data or 
@@ -100,19 +92,6 @@ Net.serve({
 // Enable Rx
 //UART.setRxEnabled(uartNo, true);
 
-//Timer.set(5*1000 /* milliseconds */, true /* repeat */, function(conn) {
-	//RPC.call('http://192.168.4.1/rpc', 'SendData', {}, function(resp, ud){
-	//	print('Response:', JSON.stringify(resp));
-	//}, null);
-	//print("tu sam");
-	//HTTP.query({
-	//	url: 'http://192.168.4.1',
-	//	success: function(body, full_http_msg) { print(body); print(''); print(full_http_msg); },
-	//	error: function(err) { print(err); },
-	//});
-
-//}, null);
-
 RPC.addHandler('SendData', function(args){
 	print('Argument: ', args.msg);
 
@@ -126,6 +105,7 @@ RPC.addHandler('SendData', function(args){
 
 		let ID = getID(recData);
 		print('ID:', ID);
+		print('Recquired ID: ', returnChar(dhtId));
 
 		let subID = getSubID(recData);
 		print('SubID:', subID);
@@ -136,6 +116,18 @@ RPC.addHandler('SendData', function(args){
 		let message = getMessage(recData, size);
 		print('Message:', message);
 		print(' ');
+
+		if(ID === returnChar(dhtId)){
+			print('Received temperature and humidity data!');
+			let temp = parseTemperature(message);
+			print('Parsed temperature:', temp);
+			let hum = parseHumidity(message);
+			print('Parsed humidity:', hum);		
+			let msg = JSON.stringify({ "temperature": temp, "humidity": hum });
+			print('Poruka za slanje:', msg);
+			let ok = MQTT.pub(topicPub, msg, qos);
+			print("Published: ", ok ? "yes" : "no", "Response", ok);
+		}
 	}
 	return true;
 });

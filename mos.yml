@@ -22,13 +22,13 @@ config_schema:
   - ["wifi.ap.ssid", "MongooseESPMaster"]
   - ["wifi.ap.pass", "Mongoose"]
   - ["device.id", "esp8266_0EA1CD"]
-#  - ["mqtt.enable", true]
-#  - ["mqtt.server", "IoTGetStartedAS.azure-devices.net:8883"]
-#  - ["mqtt.client_id", "esp8266_0EA1CD"]
-#  - ["mqtt.user", "IoTGetStartedAS.azure-devices.net:8883/esp8266_0EA1CD"]
-#  - ["mqtt.pass", "SharedAccessSignature sr=IoTGetStartedAS.azure-devices.net%2Fdevices%2Fesp8266_0EA1CD&sig=McxocEQckhaa5Ede%2BeWuRTvFPbkcdtZUcD%2FAmdR9SZg%3D&se=1536323031"]
+  - ["mqtt.enable", true]
+  - ["mqtt.server", "IoTGetStartedAS.azure-devices.net:8883"]
+  - ["mqtt.client_id", "esp8266_0EA1CD"]
+  - ["mqtt.user", "IoTGetStartedAS.azure-devices.net:8883/esp8266_0EA1CD"]
+  - ["mqtt.pass", "SharedAccessSignature sr=IoTGetStartedAS.azure-devices.net%2Fdevices%2Fesp8266_0EA1CD&sig=McxocEQckhaa5Ede%2BeWuRTvFPbkcdtZUcD%2FAmdR9SZg%3D&se=1536323031"]
   - ["mqtt.ssl_ca_cert", "ca.pem"]
-#  - ["debug.level", 2]
+  - ["debug.level", 2]
 libs:
     # common mgos libs
   - origin: https://github.com/mongoose-os-libs/ca-bundle
