@@ -32,7 +32,7 @@ Net.setStatusEventHandler(function(ev, arg){
 	}
 }, null);
 
-/*  Start a TCP server with these settings.
+/*  Start a TCP server on port 80 with these settings. IP: 192.168.4.1
  */
 Net.serve({
 	addr: 'tcp://80',
@@ -92,6 +92,17 @@ MQTT.setEventHandler(function(conn, ev, evdata){
 // Enable Rx
 //UART.setRxEnabled(uartNo, true);
 
+
+/*  RPC handler function used for communicating with slave ESP-s over websocket
+ *  Slaves call function "SendData" with arguments args. This function then
+ *	checks if received message is valid and parses all data that is sent - ID,
+ *	subID, configuration and data message.
+ *	Afterwards, if ID matches a certain sensor, it parses data message depending on
+ *	what is sent and publishes data to MQTT server.
+ *
+ *	*NOTE* If adding more sensors than DHT22, we need to add another check
+ *	for ID and do another action accordingly
+ */
 RPC.addHandler('SendData', function(args){
 	print('Argument: ', args.msg);
 
