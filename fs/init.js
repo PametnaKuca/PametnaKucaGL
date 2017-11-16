@@ -23,6 +23,8 @@ Net.setStatusEventHandler(function(ev, arg){
 	}
 }, null);
 
+/*  Function to connect to the master ESP with IP address 192.168.4.1 and port 80
+ */
 Net.connect({
 	addr: 'tcp://192.168.4.1:80',	//[PROTO://]HOST:PORT
 	onconnect: function(conn) {
@@ -33,11 +35,13 @@ Net.connect({
 	},
 });
 
+/*  Periodic timer function that checks if device is connected to master ESP, 
+ *  reads temperature and humidity every 5 seconds, creates data package
+ * 	and sends data via RPC call to master 
+ */
 Timer.set(5*1000 /* milliseconds */, true /* repeat */, function(conn) {
 
 	if(isConnected){
-		//print('Sending...:', msg);
-		print('Getting HTTP request...');
 		let temp = dht.getTemp();
 		let hum = dht.getHumidity();
 		let data = JSON.stringify(temp) + ',' + JSON.stringify(hum);
