@@ -13,9 +13,10 @@
 
 #define MAX_PACK_LEN 999
 
-/*
- *  The function measures and returns string length.
+
+/*  The function measures and returns string length.
  *  @param string which we want to measure
+ *	return - size of the string
  */
 short stringLength(char *str){
 	char *tempStr = str;
@@ -25,6 +26,10 @@ short stringLength(char *str){
 	return len;
 }
 
+/*	Function that calculates XOR value of the input string. 
+ *  @param message - string to calculate XOR value of 
+ *  return - xor value of the string
+ */
 char* stringXOR(char *message)
 {
 		static char xorString[2];
@@ -36,6 +41,15 @@ char* stringXOR(char *message)
 		return xorString;		
 }
 
+
+/*  Function creates a package from input parameters, calculates xor value of 
+ *  the message. Shape of the package is ID|subID|Conf|data|xor, without |
+ *	@param ID - ID of the device
+ *	@param subID - subID of the sensor
+ *	@param conf - configuration byte 
+ *	@param data - sensor data (temperature, humidity, RFID etc.)
+ *	return - created package in above mentioned shape
+ */
 char* createPackage(int ID, int subID, int conf, char *data)
 {
 	static char packageTemp[MAX_PACK_LEN + 1], *xor;
