@@ -116,7 +116,7 @@ RPC.addHandler('SendData', function(args){
 
 		let ID = getID(recData);
 		print('ID:', ID);
-		print('Recquired ID: ', returnChar(dhtId));
+		print('Required ID: ', returnChar(dhtId));
 
 		let subID = getSubID(recData);
 		print('SubID:', subID);
@@ -136,8 +136,8 @@ RPC.addHandler('SendData', function(args){
 			print('Parsed humidity:', hum);		
 			let msg = JSON.stringify({ "temperature": temp, "humidity": hum });
 			print('Poruka za slanje:', msg);
-			let ok = MQTT.pub(topicPub, msg, qos);
-			print("Published: ", ok ? "yes" : "no", "Response", ok);
+			//let ok = MQTT.pub(topicPub, msg, qos);
+			//print("Published: ", ok ? "yes" : "no", "Response", ok);
 		}
 	}
 	return true;
