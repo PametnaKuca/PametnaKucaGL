@@ -1,36 +1,5 @@
-#include <stdio.h>
-#include <string.h>
-#include <malloc.h>
+#include "main.h"
 
-#include "common/platform.h"
-#include "common/cs_file.h"
-#include "mgos_app.h"
-#include "mgos_gpio.h"
-#include "mgos_sys_config.h"
-#include "mgos_timers.h"
-#include "mgos_hal.h"
-#include "mgos_dlsym.h"
-#include "mjs.h"
-
-/* Sizes of each part of the package */
-#define MAX_PACK_LEN 999
-#define SIZE_STR_LEN 3
-#define ID_STR_LEN 1
-#define SUB_ID_STR_LEN 1
-#define CONF_STR_LEN 1
-#define XOR_STR_LEN 1
-#define EXTRA_STR_LEN (ID_STR_LEN + SUB_ID_STR_LEN + CONF_STR_LEN + XOR_STR_LEN)
-
-struct package{
-	short size;
-	char ID;
-	char subID;
-	char conf;
-	char* message;
-	char xor;
-};
-
-/* Function parses temperature from input string in form (temp,hum) */
 char *returnTemperature(char *str){
     static char temp[10] = "";
     int i;
@@ -47,7 +16,6 @@ char *returnTemperature(char *str){
 	return temp;
 }
 
-/* Function parses humidity from input string in form (temp,hum) */
 char *returnHumidity(char *str){
     static char hum[10] = "";
     int j = 0;
@@ -72,15 +40,6 @@ char *returnHumidity(char *str){
     return hum;
 }
 
-/*  Function checks if the received string is valid by xor-ing 
- *  input string (ignoring the last byte) and compares it with 
- *  the last byte which is before calculated xor value
- *  Additionaly, function counts takes required size of the message and while
- *  calculating xor value, calculates received string size.
- *	@param str -> string to check
- *  @param size -> size of the string (without first 3 bytes)
- * 	@return -> 0 if different string was received than sent, 1 if strings are same
- */
 int checkIfValid(char* str, int size){
 	char xorString = *str;
 	char *nextChar = str + 1;
@@ -97,10 +56,6 @@ int checkIfValid(char* str, int size){
 	return 0;
 }
 
-/*  Function which parses first 3 bytes from the input string
- * 	@param str -> string to parse
- *	@return -> first 3 bytes of the string casted into short
- */
 int getSize(char *str){
 	char size[SIZE_STR_LEN];
 	int i;
@@ -110,7 +65,6 @@ int getSize(char *str){
 	return (short) atoi(size);
 }
 
-/* Function parses out ID (4th byte) from the input string */
 char *getID(char *str){
 	static char ID[2] = "";
 	int i;
@@ -120,7 +74,6 @@ char *getID(char *str){
 	return ID;
 }
 
-/* Function parses out subID (5th byte) from the input string */
 char *getSubID(char *str){
 	static char subID[2] = "";
 	int i;
@@ -130,7 +83,6 @@ char *getSubID(char *str){
 	return subID;
 }
 
-/* Function parses out configuration (6th byte) from the input string */
 char *getConf(char *str){
 	static char conf[2] = "";
 	int i;
@@ -140,12 +92,6 @@ char *getConf(char *str){
 	return conf;
 }
 
-
-/*	Function parses message(sensor data) of the received string.  
- *	@param str -> input string
- *	@param size -> size of the string excluding first 3 bytes 
- *	return -> pointer to the first character of the message
- */
 char *getMessage(char *str, int size){
 	char *tempMessage = (char *) malloc(sizeof (char) * (size - EXTRA_STR_LEN + 1));
 	int i;
