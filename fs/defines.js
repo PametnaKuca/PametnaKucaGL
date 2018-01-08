@@ -9,7 +9,7 @@ load('api_net.js');
 
 /* Other defines */
 let uartNo = 0;		//uart number
-//let isConnected = false;
+let isConnected = false;
 //let isMQTTConnected = false;
 
 //let deviceId = Cfg.get('device.id');

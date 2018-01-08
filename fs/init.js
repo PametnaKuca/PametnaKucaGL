@@ -1,24 +1,24 @@
 load('defines.js');
 
-//Net.setStatusEventHandler(function(ev, arg){
-//	print("Wifi Event:", ev);
-//	if(ev === Net.STATUS_DISCONNECTED) {
-//		print("Wifi DISCONNECTED - Event time:", Timer.now());
-//		isConnected = false;
-//	}
-//	if(ev === Net.STATUS_CONNECTING) {
-//		print("Wifi CONNECTING - Event time:", Timer.now());
-//		isConnected = false;
-//	}
-//	if(ev === Net.STATUS_CONNECTED) {
-//		print("Wifi CONNECTED - Event time:", Timer.now());
-//		isConnected = true;
-//	}
-//	if(ev === Net.STATUS_GOT_IP) {
-//		print("Device got IP - Event time:", Timer.now());
-//		isConnected = true;
-//	}
-//}, null);
+Net.setStatusEventHandler(function(ev, arg){
+	print("Wifi Event:", ev);
+	if(ev === Net.STATUS_DISCONNECTED) {
+		print("Wifi DISCONNECTED - Event time:", Timer.now());
+		isConnected = false;
+	}
+	if(ev === Net.STATUS_CONNECTING) {
+		print("Wifi CONNECTING - Event time:", Timer.now());
+		isConnected = false;
+	}
+	if(ev === Net.STATUS_CONNECTED) {
+		print("Wifi CONNECTED - Event time:", Timer.now());
+		isConnected = true;
+	}
+	if(ev === Net.STATUS_GOT_IP) {
+		print("Device got IP - Event time:", Timer.now());
+		isConnected = true;
+	}
+}, null);
 
 
 //MQTT.setEventHandler(function(conn, ev, evdata){
@@ -67,14 +67,13 @@ UART.setDispatcher(uartNo, function(uartNo, ud) {
 			UART.write(uartNo, 'Message:' + message + '\r\n');
 		}
 
-		//print("Received UART data:", rec);
-		//let temp = parseTemperature(rec);
-		//print('Parsed temperature:', temp);
-		//let hum = parseHumidity(rec);
-		//print('Parsed humidity:', hum);		
-		//let msg = JSON.stringify({ "temperature": temp, "humidity": hum });
-		//print('Poruka za slanje:', msg);
-		//print(msg);
+		print("Received UART data:", rec);
+		let temp = parseTemperature(rec);
+		print('Parsed temperature:', temp);
+		let hum = parseHumidity(rec);
+		print('Parsed humidity:', hum);		
+		let msg = JSON.stringify({ "temperature": temp, "humidity": hum });
+		print('Poruka za slanje:', msg);
 //		let ok = MQTT.pub(topic, msg, 1);
 //		print("Published: ", ok ? "yes" : "no", "Response", ok);
 	}  
