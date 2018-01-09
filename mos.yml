@@ -13,19 +13,19 @@ filesystem:
 config_schema:
   - ["rpc.uart.uart_no", -1]
 #  - ["debug.stdout_uart", 1]
-# - ["debug.stderr_uart", 1]
+#  - ["debug.stderr_uart", 1]
   - ["wifi.sta.enable", true]
   - ["wifi.sta.ssid", "GL_Guest"]
   - ["wifi.sta.pass", "We1C0me2GL#"]
   - ["wifi.ap.enable", false]
-  - ["device.id", "esp8266_0EA1CD"]
+#  - ["device.id", "esp8266_0EA1CD"]
 #  - ["mqtt.enable", true]
 #  - ["mqtt.server", "IoTGetStartedAS.azure-devices.net:8883"]
 #  - ["mqtt.client_id", "esp8266_0EA1CD"]
 #  - ["mqtt.user", "IoTGetStartedAS.azure-devices.net:8883/esp8266_0EA1CD"]
 #  - ["mqtt.pass", "SharedAccessSignature sr=IoTGetStartedAS.azure-devices.net%2Fdevices%2Fesp8266_0EA1CD&sig=McxocEQckhaa5Ede%2BeWuRTvFPbkcdtZUcD%2FAmdR9SZg%3D&se=1536323031"]
 #  - ["mqtt.ssl_ca_cert", "ca.pem"]
-#  - ["debug.level", 2]
+  - ["debug.level", 2]
 libs:
     # common mgos libs
   - origin: https://github.com/mongoose-os-libs/ca-bundle

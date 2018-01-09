@@ -5,6 +5,7 @@ load('api_sys.js');
 load('api_timer.js');
 load('api_uart.js');
 load('api_net.js');
+load('api_wifi.js');
 
 
 /* Other defines */
@@ -29,7 +30,7 @@ let getMessage = ffi('char* getMessage(char*, int)');
 // Configure UART at 115200 baud
 UART.setConfig(uartNo, {
 	baudRate: 115200,
-	esp8266: {
-		swapRxCtsTxRts: true,	//GPIO15 becomes TX instead of GPIO1, GPIO13 RX
-	},
+//	esp8266: {
+//		swapRxCtsTxRts: true,	//GPIO15 becomes TX instead of GPIO1, GPIO13 RX
+//	},
 });

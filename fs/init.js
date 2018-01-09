@@ -2,19 +2,19 @@ load('defines.js');
 
 Net.setStatusEventHandler(function(ev, arg){
 	print("Wifi Event:", ev);
-	if(ev === Net.STATUS_DISCONNECTED) {
-		print("Wifi DISCONNECTED - Event time:", Timer.now());
+	if (ev === Net.STATUS_DISCONNECTED){
+		print("Wifi Disconnected - Event time:", Timer.now());
 		isConnected = false;
 	}
-	if(ev === Net.STATUS_CONNECTING) {
-		print("Wifi CONNECTING - Event time:", Timer.now());
+	if (ev === Net.STATUS_CONNECTING){
+		print("Wifi Connecting - Event time:", Timer.now());
 		isConnected = false;
 	}
-	if(ev === Net.STATUS_CONNECTED) {
-		print("Wifi CONNECTED - Event time:", Timer.now());
+	if (ev === Net.CONNECTED){
+		print("Wifi Connected - Event time:", Timer.now());
 		isConnected = true;
 	}
-	if(ev === Net.STATUS_GOT_IP) {
+	if (ev === Net.STATUS_GOT_IP){
 		print("Device got IP - Event time:", Timer.now());
 		isConnected = true;
 	}
@@ -42,10 +42,13 @@ Net.setStatusEventHandler(function(ev, arg){
 UART.setDispatcher(uartNo, function(uartNo, ud) {
 	let ra = UART.readAvail(uartNo);
 	let oa = UART.writeAvail(uartNo);
+
 	if (ra > 0) {
 		// Received new data: print it immediately to the console, and also
 		let rec = UART.read(uartNo);
 		let size = getSize(rec);
+		print('Prosao prvi uvjet');
+		let temp, hum;
 		
 		UART.write(uartNo, 'Received UART data:' + rec + '\r\n');
 		UART.write(uartNo, 'Size:' + JSON.stringify(size) + '\r\n');
@@ -65,18 +68,21 @@ UART.setDispatcher(uartNo, function(uartNo, ud) {
 			
 			let message = getMessage(rec, size);
 			UART.write(uartNo, 'Message:' + message + '\r\n');
+
+			temp = parseTemperature(message);
+			print('Parsed temperature:', temp);
+			
+			hum = parseHumidity(message);
+			print('Parsed humidity:', hum);	
 		}
 
-		print("Received UART data:", rec);
-		let temp = parseTemperature(rec);
-		print('Parsed temperature:', temp);
-		let hum = parseHumidity(rec);
-		print('Parsed humidity:', hum);		
+		print("Received UART data:", rec);	
 		let msg = JSON.stringify({ "temperature": temp, "humidity": hum });
 		print('Poruka za slanje:', msg);
 //		let ok = MQTT.pub(topic, msg, 1);
 //		print("Published: ", ok ? "yes" : "no", "Response", ok);
 	}  
+
 }, null);
 
 // Enable Rx
